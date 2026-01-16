@@ -1,0 +1,16 @@
+Create html file
+Write docker file
+Start docker
+    sudo systemctl start docker
+    sudo systemctl enable docker
+
+Start building the image
+    sudo docker build -t app:1.0 .
+
+To check all the images
+    sudo docker images
+
+To run the container
+    sudo docker run -d -p 8080:80 app:1.0
+
+Open localhost:8080 to check its working and perform rest commands in terminal given in the question
