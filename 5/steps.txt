@@ -1,0 +1,18 @@
+Create a virtual env
+    python3 -m venv myenv
+    source myenv/bin/activate
+
+Create a requirements.txt
+    numpy
+    pandas
+    ipykernel
+    jupyterlab
+    notebook
+
+run: pip install -r requirements.txt
+run: jupyterlab
+Create new notebook:
+    import sys
+    print(sys.version)
+    import pandas as pods
+    print(pd.__version__)
