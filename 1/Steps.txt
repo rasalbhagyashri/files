@@ -1,0 +1,26 @@
+create index.html
+login github and connect the repo and push
+    git init
+    git add .
+    git commit -m "First Commit"
+    git branch -M main
+    git remote add origin Repo_URL.git
+    git push origin main
+
+Create new branch and switch to init
+    git checkout new-branch
+    git branch
+
+Edit the html file and add another field
+Add and commit the file
+    git add .
+    git commit -m "New Changes"
+Push the chanegs to origin
+    git push origin new-branch
+
+Pull the request and merge
+    git pull origin main (or pull from website)
+    git checkout main
+    git pull origin main
+    git merge new-branch
+    
