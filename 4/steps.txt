@@ -1,0 +1,26 @@
+Create simple html file and dockerfile
+Build the image using
+    docker build -t app:1.0 .
+
+Start the kubernetes
+    minikube start --driver=docker
+
+Create app.yaml for configurations
+
+laod the image to minikube
+    minikube image load app:1.0
+
+and apply the k8s
+    kubectl apply -f app.yaml
+    kubectl get pods
+
+expose the deployment
+    kubectl get deployments
+    kubectl expose deployement app-deploy --type=NodePort --port=80
+    kubectl get svc
+
+Get the url 
+    minikube service app-deploy --url
+
+Scale the deployment
+    kubectl scale deployment app-deploy --replicas=3
