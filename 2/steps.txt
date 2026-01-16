@@ -1,0 +1,37 @@
+Start the jenkins
+    java -jar jenkins.war
+
+Create one github repo, connect this to the terminal and create html file and push
+    git init
+    git add .
+    git commit -m "First Commit"
+    git branch -M main
+    git remote add origin Repo_URL.git
+    git push origin main
+
+Go to jenkins>setting>credentials
+        Add global credentials  
+        Add github username and personal access token
+        Save it with all things
+Go home>new item
+        Name the item and choose freestyle project
+
+Configuration
+        POLL SCM = * * * * *
+        Add build step = Executive Shell
+            echo "Start"
+            echo "Time"
+            date
+            echo "current dir"
+            pwd
+            echo "List all files"
+            ls -l
+            echo "Latest Commits"
+            git --no-pager log -3 --oneline
+            echo "Build Done"
+        
+    Source code management > Git> repo url and credentials
+    Branch specifier= */main and save all
+    Now go to terminal, make changes to html file and look at the dashboard for updates 
+
+    
