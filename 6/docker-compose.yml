@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    depends_on: [redis]
+  
+  redis:
+    image: redis
+    volumes: [redis-data:/data]
+volumes:
+  redis-data:
